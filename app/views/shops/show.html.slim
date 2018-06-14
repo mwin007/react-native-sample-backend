@@ -1,0 +1,19 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @shop.name
+p
+  strong Landlord:
+  = link_to @shop.landlord.name, landlord_path(@shop.landlord)
+
+p
+  strong Address:
+  = "#{@shop.address} (#{@shop.latitude}, #{@shop.longitude})"
+
+p
+  = image_tag google_map(center: @shop.address)
+
+=> link_to 'Edit', edit_shop_path(@shop)
+'|
+=< link_to 'Back', shops_path

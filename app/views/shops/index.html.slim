@@ -1,0 +1,21 @@
+h3 Listing shops
+
+table.table.table-striped
+  thead.thead-default
+    tr
+      th Name
+      th Landlord
+      th
+
+  tbody
+    - @shops.each do |shop|
+      tr
+        td = link_to shop.name, shop_path(shop)
+        td = link_to shop.landlord.name, landlord_path(shop.landlord)
+        td
+          = link_to 'Edit', edit_shop_path(shop), class: 'btn btn-primary'
+          = link_to 'Destroy', shop, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Shop', new_shop_path, class: 'btn btn-default'

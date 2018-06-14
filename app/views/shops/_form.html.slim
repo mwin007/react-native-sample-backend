@@ -1,0 +1,5 @@
+= bootstrap_form_for @shop do |f|
+  = f.text_field :name
+  = f.select :landlord_id, @landlords
+
+  = f.submit "Submit", class: 'btn btn-default'

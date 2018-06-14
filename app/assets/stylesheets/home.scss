@@ -1,0 +1,56 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+section.body {
+    float: left;
+    width: 100%;
+    background: #42275a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #734b6d, #42275a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #734b6d, #42275a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section.body h2 {
+    float: left;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 14px;
+    span {
+      font-family: 'Libre Baskerville', serif;
+      display: block;
+      font-size: 45px;
+      text-transform: none;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      font-weight: 700;
+    }
+}
+
+section.body a {
+  color: #42275a;
+}
+
+section.body .row-block {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 50px;
+    table tr td:last-child {
+        text-align: right;
+        a {
+          margin: 5px;
+        }
+    }
+}
+
+.btn-default {
+  background: #6B456A;
+  color: #fff !important;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+}

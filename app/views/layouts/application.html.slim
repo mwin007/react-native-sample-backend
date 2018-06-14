@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Marketplace
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+    section.body
+      .container
+        .row
+          h2.text-center
+            span> Pollen Shops
+          .col-10.offset-md-1.row-block
+            ul.nav.justify-content-center
+              li.nav-item.active
+                = link_to 'Merchants', merchants_url, class: 'nav-link'
+              li.nav-item
+                = link_to 'Landlords', landlords_url, class: 'nav-link'
+              li.nav-item
+                = link_to 'Shops', shops_url, class: 'nav-link'
+              li.nav-item
+                = link_to 'Products', products_url, class: 'nav-link'
+            section.content
+              = yield

@@ -1,0 +1,21 @@
+h3 Listing products
+
+table.table.table-striped
+  thead.thead-default
+    tr
+      th Name
+      th Merchant
+      th
+
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.name
+        td = link_to product.merchant.name, merchant_path(product.merchant)
+        td
+          = link_to 'Edit', edit_product_path(product), class: 'btn btn-primary'
+          = link_to 'Destroy', product, class: 'btn btn-danger', data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Merchant', new_product_path, class: 'btn btn-default'
